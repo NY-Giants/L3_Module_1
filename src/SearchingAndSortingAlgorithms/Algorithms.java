@@ -90,6 +90,35 @@ public class Algorithms {
 		}
 		return results;
 	}
+
+	public static Object sortDNA(List<String> unsortedSequences) {
+		for(int i = 0; i < unsortedSequences.size(); i++) {
+			String f = unsortedSequences.get(i); 
+			for(int j = i+1; j < unsortedSequences.size(); j++) {
+			if(unsortedSequences.get(i).length() > unsortedSequences.get(j).length()) {
+				String temp = unsortedSequences.get(j);
+				unsortedSequences.set(j, unsortedSequences.get(i));
+				unsortedSequences.set(i,temp);
+				
+			}
+			}
+		
+	}
+		return unsortedSequences;
+		
 	
 	//Add other methods here
+}
+
+	public static List<String> sortWords(List<String> words) {
+		for(int i = 0; i < words.size(); i++) {
+			String g = words.get(i); 
+			for(int j = i+1; j < words.size(); j++) {
+			String h = words.get(j);	
+			int z = h.compareTo(g);
+			}
+			}
+		return words;
+
+}
 }
